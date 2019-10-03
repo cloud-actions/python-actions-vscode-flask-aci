@@ -4,8 +4,6 @@ on:
   push:
     branches:
     - 4-action-acr-aci
-    paths:
-    - '*'
 
 jobs:
   build-and-deploy:
