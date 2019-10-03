@@ -5,9 +5,6 @@ RESOURCE_GROUP='191000-python-actions-aks'
 LOCATION='eastus'
 RANDOM_STR='82ffdh'
 
-# clone app
-git clone https://github.com/microsoft/python-sample-vscode-flask-tutorial.git
-cd python-sample-vscode-flask-tutorial/
 # create container registry
 REGISTRY_NAME="acr${RANDOM_STR}"
 az acr create -g $RESOURCE_GROUP -l $LOCATION --name $REGISTRY_NAME --sku Basic --admin-enabled true

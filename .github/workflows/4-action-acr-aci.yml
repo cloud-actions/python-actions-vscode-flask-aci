@@ -3,7 +3,10 @@ name: 4-action-acr-aci
 on:
   push:
     branches:
-    - 4-action-acr-aci
+    - 2-app-python-flask
+    paths:
+    - azure/*
+    - hello_app/*
 
 jobs:
   build-and-deploy:
