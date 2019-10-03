@@ -16,6 +16,7 @@ jobs:
     - name: bash DEPLOY.sh
       env:
         AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+        GITHUB_SHA: ${{ github.sha }}
       run: |
         cd $GITHUB_WORKSPACE/
         bash azure/DEPLOY.sh
