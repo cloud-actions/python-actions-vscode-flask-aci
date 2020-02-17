@@ -10,7 +10,7 @@ SUBSCRIPTION_ID=$(az account show | jq -r .id)
 
 az group create -n $RESOURCE_GROUP -l $LOCATION
 
-SP=$(az ad sp create-for-rbac -n $RESOURCE_GROUP --role contributor \
+SP=$(az ad sp create-for-rbac --sdk-auth -n $RESOURCE_GROUP --role contributor \
     --scopes "/subscriptions/${SUBSCRIPTION_ID}/resourceGroups/${RESOURCE_GROUP}")
 echo $SP
 ```
