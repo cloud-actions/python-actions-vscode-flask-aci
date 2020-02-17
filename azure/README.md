@@ -2,7 +2,7 @@
 
 ## 1. Create Azure Service Principal 
 
-Open your local [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest), the [Azure Cloud Shell (bash)](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart) or <https://shell.azure.com/> and run the following snippet:
+Open your local [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) (+[jq](https://stedolan.github.io/jq/download/)), the [Azure Cloud Shell (bash)](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart) or <https://shell.azure.com/> and run the following snippet:
 ```bash
 RESOURCE_GROUP='200200-actions'
 LOCATION='eastus'
@@ -12,7 +12,7 @@ az group create -n $RESOURCE_GROUP -l $LOCATION
 
 SP=$(az ad sp create-for-rbac --sdk-auth -n $RESOURCE_GROUP --role contributor \
     --scopes "/subscriptions/${SUBSCRIPTION_ID}/resourceGroups/${RESOURCE_GROUP}")
-echo $SP
+echo $SP | jq -c
 ```
 
 ## 2. Create GitHub Actions Secret
