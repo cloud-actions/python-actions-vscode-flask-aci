@@ -2,7 +2,7 @@
 
 ## 1. Create Azure Service Principal 
 
-Open <https://shell.azure.com/> and run the following snippet:
+Open your local [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest), the [Azure Cloud Shell (bash)](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart) or <https://shell.azure.com/> and run the following snippet:
 ```bash
 RESOURCE_GROUP='200200-actions'
 LOCATION='eastus'
@@ -17,7 +17,7 @@ echo $SP
 
 ## 2. Create GitHub Actions Secret
 
-Copy the JSON above and create a secret `AZURE_CREDENTIALS` under `Settings > Secrets` in your GitHub repository (e.g. <https://github.com/asw101/python-actions-flask-aci/settings/secrets>).
+Copy the JSON output above and create a secret named `AZURE_CREDENTIALS` under `Settings > Secrets` in your GitHub repository's [Settings](../../settings/secrets).
 
 ## 3. Modify [DEPLOY.sh](DEPLOY.sh) and trigger a build
 
