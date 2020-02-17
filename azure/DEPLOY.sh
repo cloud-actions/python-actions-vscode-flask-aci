@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # variables
-RESOURCE_GROUP='191000-python-actions-aks'
+RESOURCE_GROUP='200200-actions'
 LOCATION='eastus'
 RANDOM_STR='82ffdh'
 
