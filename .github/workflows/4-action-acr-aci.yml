@@ -3,7 +3,7 @@ name: 4-action-acr-aci
 on:
   push:
     branches:
-    - 2-app-python-flask
+    - master
     paths:
     - azure/*
     - hello_app/*
