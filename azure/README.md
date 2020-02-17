@@ -17,7 +17,7 @@ echo $SP
 
 ## 2. Create GitHub Actions Secret
 
-Copy the JSON output above and create a secret named `AZURE_CREDENTIALS` under `Settings > Secrets` in your GitHub repository's [Settings](../../settings/secrets).
+Copy the JSON output above and create a secret named `AZURE_CREDENTIALS` under `Settings > Secrets` in your GitHub repository's [Settings](../../../settings/secrets).
 
 ## 3. Modify [DEPLOY.sh](DEPLOY.sh) and trigger a build
 
