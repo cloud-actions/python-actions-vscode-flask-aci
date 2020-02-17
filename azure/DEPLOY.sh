@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # variables
 RESOURCE_GROUP='200200-actions'
